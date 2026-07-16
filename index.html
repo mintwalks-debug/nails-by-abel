@@ -14,23 +14,23 @@
 
 <style>
   :root {
-    --cream: #EFEAE4;
-    --cream-soft: #DFD6CD;
-    --cream-card: #FAF6F2;
-    --ink: #331F14;
-    --ink-soft: #6E5545;
-    --plum: #7A5C47;
-    --plum-dark: #422A1C;
-    --rosegold: #B89C82;
-    --rosegold-light: #DCCFBF;
-    --rosegold-glow: rgba(184, 156, 130, 0.25);
-    --gold-shimmer: #C2A48C;
-    --blush: #F5EFEB;
-    --border-gold: rgba(122, 92, 71, 0.22);
-    --border-light: rgba(255, 255, 255, 0.6);
-    --shadow-sm: 0 4px 20px -4px rgba(51, 31, 20, 0.08);
-    --shadow-md: 0 16px 40px -10px rgba(51, 31, 20, 0.14);
-    --shadow-lg: 0 30px 70px -15px rgba(51, 31, 20, 0.28);
+    --cream: #FAF5F8;
+    --cream-soft: #F3E8EE;
+    --cream-card: #FFFFFF;
+    --ink: #2D1927;
+    --ink-soft: #66495E;
+    --plum: #D2789F;
+    --plum-dark: #4A1535;
+    --rosegold: #A28CD0;
+    --rosegold-light: #E3DBF3;
+    --rosegold-glow: rgba(210, 120, 159, 0.25);
+    --gold-shimmer: #ECC472;
+    --blush: #FFF0F6;
+    --border-gold: rgba(210, 120, 159, 0.22);
+    --border-light: rgba(255, 255, 255, 0.7);
+    --shadow-sm: 0 4px 20px -4px rgba(45, 25, 39, 0.08);
+    --shadow-md: 0 16px 40px -10px rgba(45, 25, 39, 0.14);
+    --shadow-lg: 0 30px 70px -15px rgba(45, 25, 39, 0.28);
     --radius-sm: 12px;
     --radius-md: 20px;
     --radius-lg: 32px;
@@ -54,10 +54,10 @@
 
   /* ---------- subtle luxury background texture ---------- */
   .bg-mesh {
-    position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.55;
-    background: radial-gradient(circle at 10% 15%, rgba(184, 156, 130, 0.2) 0%, transparent 40%), /* Caramel */
-                radial-gradient(circle at 90% 85%, rgba(110, 85, 69, 0.15) 0%, transparent 45%), /* Cocoa */
-                radial-gradient(circle at 50% 50%, rgba(239, 234, 228, 0.1) 0%, transparent 60%); /* Cream */
+    position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.6;
+    background: radial-gradient(circle at 10% 15%, rgba(210, 120, 159, 0.18) 0%, transparent 40%), /* Orchid Pink */
+                radial-gradient(circle at 90% 85%, rgba(162, 140, 208, 0.2) 0%, transparent 45%), /* Lavender */
+                radial-gradient(circle at 50% 50%, rgba(255, 240, 246, 0.15) 0%, transparent 60%); /* Blush Pink */
   }
   .content-wrap { position: relative; z-index: 10; }
 
@@ -69,11 +69,11 @@
     transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
   }
   header.site-header.scrolled {
-    background: rgba(239, 234, 228, 0.88);
+    background: rgba(250, 245, 248, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 14px clamp(20px, 5vw, 80px);
-    box-shadow: 0 4px 30px rgba(51, 31, 20, 0.06);
+    box-shadow: 0 4px 30px rgba(45, 25, 39, 0.06);
     border-bottom: 1px solid var(--border-gold);
   }
   .brand-logo {
@@ -520,7 +520,7 @@
   }
   .map-wrapper iframe { width: 100%; height: 100%; min-height: 400px; border: 0; }
   footer { 
-    background: linear-gradient(to bottom, var(--plum-dark) 0%, #1F1109 100%); 
+    background: linear-gradient(to bottom, var(--plum-dark) 0%, #1F0514 100%); 
     color: var(--cream); 
     padding: 80px clamp(20px, 5vw, 80px) 40px; 
     border-top: 1px solid var(--border-gold);
