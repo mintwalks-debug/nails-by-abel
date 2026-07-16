@@ -449,19 +449,30 @@
     max-width: 1200px; margin: 0 auto;
   }
   .review-card {
-    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-md); padding: 32px 28px; display: flex; flex-direction: column;
-    justify-content: space-between; position: relative;
+    background: #ffffff; border: 1px solid rgba(232, 125, 149, 0.15);
+    border-radius: var(--radius-md); padding: 24px; display: flex; flex-direction: column;
+    justify-content: space-between; position: relative; box-shadow: var(--shadow-sm);
   }
-  .stars { color: var(--gold-shimmer); font-size: 16px; letter-spacing: 2px; margin-bottom: 16px; }
-  .review-text { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; line-height: 1.6; color: #fff; margin-bottom: 24px; }
-  .review-author { display: flex; align-items: center; gap: 14px; }
+  .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
   .author-avatar {
-    width: 44px; height: 44px; border-radius: 50%; background: var(--rosegold);
-    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; color: #fff;
+    width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; color: #fff; flex-shrink: 0;
   }
-  .author-info .name { font-weight: 700; font-size: 15px; color: #fff; }
-  .author-info .meta { font-size: 12px; color: var(--rosegold-light); opacity: 0.8; }
+  .author-meta { display: flex; flex-direction: column; text-align: left; }
+  .author-meta .name { font-weight: 700; font-size: 14px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+  .author-meta .name .badge-guide { font-size: 9px; font-weight: 700; background: var(--cream-soft); color: var(--plum); padding: 1px 7px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .review-stars-row { display: flex; align-items: center; gap: 6px; margin-top: 2px; }
+  .stars { color: #F4B400; font-size: 13px; letter-spacing: 1px; } /* Google gold star color */
+  .review-time { font-size: 11px; color: var(--ink-soft); opacity: 0.75; }
+  
+  .review-text { font-family: inherit; font-style: normal; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 0; text-align: left; }
+  
+  .owner-response {
+    background: var(--cream); border-left: 3px solid var(--rosegold); border-radius: 8px; padding: 12px 14px; margin-top: 14px; text-align: left;
+  }
+  .owner-response-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+  .owner-response-title { font-size: 12px; font-weight: 700; color: var(--plum); }
+  .owner-response-time { font-size: 10.5px; color: var(--ink-soft); opacity: 0.75; }
+  .owner-response-text { font-size: 12.5px; line-height: 1.5; color: var(--ink-soft); font-style: italic; }
 
   /* Google Rating Banner */
   .google-banner {
@@ -1122,60 +1133,96 @@
     <!-- Review 1 -->
     <div class="review-card">
       <div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"The best nail art salon in whole Jaipur I must say. Reasonable. Amazing work. Good behavior. Must go place. Fully satisfied! 👌👌👌"</p>
-      </div>
-      <div class="review-author">
-        <div class="author-avatar">Y</div>
-        <div class="author-info">
-          <div class="name">Yukta Israni</div>
-          <div class="meta">Verified Google Review · 2 reviews</div>
+        <div class="review-header">
+          <div class="author-avatar" style="background:#3F51B5;">Y</div>
+          <div class="author-meta">
+            <div class="name">Yukta Israni</div>
+            <div class="review-stars-row">
+              <div class="stars">★★★★★</div>
+              <span class="review-time">· a month ago</span>
+            </div>
+          </div>
         </div>
+        <p class="review-text">The best nail art salon in whole jaipur i must say. Reasonable. Amazing work. Good behavior. Must go place. Fully satisfied. ☀️ ☀️ ☀️ ☀️ ☀️ 👌 👌 👌 👌 👌</p>
+      </div>
+      <div class="owner-response">
+        <div class="owner-response-header">
+          <span class="owner-response-title">Response from the owner</span>
+          <span class="owner-response-time">a month ago</span>
+        </div>
+        <p class="owner-response-text">Thank you for your kind words! Our goal is to make every client feel fabulous, and we're so happy we succeeded with you.</p>
       </div>
     </div>
 
     <!-- Review 2 -->
     <div class="review-card">
       <div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Such a great experience Girlss! Beautiful work, clean setup, and perfect finishing. Got so many compliments on my nails. Highly recommended! Specially Thanks To Mr Abel."</p>
-      </div>
-      <div class="review-author">
-        <div class="author-avatar" style="background:#0D9488;">T</div>
-        <div class="author-info">
-          <div class="name">Tanya Lodha</div>
-          <div class="meta">Verified Google Review · 4 reviews</div>
+        <div class="review-header">
+          <div class="author-avatar" style="background:#009688;">T</div>
+          <div class="author-meta">
+            <div class="name">Tanya Lodha</div>
+            <div class="review-stars-row">
+              <div class="stars">★★★★★</div>
+              <span class="review-time">· 3 months ago</span>
+            </div>
+          </div>
         </div>
+        <p class="review-text">Such a great experience Girlss! Beautiful work, clean setup, and perfect finishing. Got so many compliments on my nails. Highly recommended! Specially Thanks To Mr Abel. Absolutely loved the services.</p>
+      </div>
+      <div class="owner-response">
+        <div class="owner-response-header">
+          <span class="owner-response-title">Response from the owner</span>
+          <span class="owner-response-time">3 months ago</span>
+        </div>
+        <p class="owner-response-text">Thank you for your kind words! Our goal is to make every client feel fabulous, and we're so happy we succeeded with you.</p>
       </div>
     </div>
 
     <!-- Review 3 -->
     <div class="review-card">
       <div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Good work by Abel. He is knowledgeable and quite skilled. The attention to fine lines and cuticle care is unmatched anywhere else in Mansarovar."</p>
-      </div>
-      <div class="review-author">
-        <div class="author-avatar" style="background:#E11D48;">K</div>
-        <div class="author-info">
-          <div class="name">Kritika Shukla</div>
-          <div class="meta">Local Guide · 22 reviews</div>
+        <div class="review-header">
+          <div class="author-avatar" style="background:#E91E63;">K</div>
+          <div class="author-meta">
+            <div class="name">Kritika Shukla <span class="badge-guide">Local Guide</span></div>
+            <div class="review-stars-row">
+              <div class="stars">★★★★★</div>
+              <span class="review-time">· 5 months ago</span>
+            </div>
+          </div>
         </div>
+        <p class="review-text">Good work by Abel. He is knowledgeable and quite skilled. The attention to fine lines and cuticle care is unmatched anywhere else in Mansarovar.</p>
+      </div>
+      <div class="owner-response">
+        <div class="owner-response-header">
+          <span class="owner-response-title">Response from the owner</span>
+          <span class="owner-response-time">5 months ago</span>
+        </div>
+        <p class="owner-response-text">Thank you for the wonderful feedback, Kritika! Abel takes great pride in perfecting the cuticle prep and line work. We hope to see you again soon!</p>
       </div>
     </div>
 
     <!-- Review 4 -->
     <div class="review-card">
       <div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Highly recommend Nails by Abel! The nail extension finishing is super clean and long-lasting. Abel has great knowledge about gel extensions and did exactly what I wanted. Definitely the best nail artist in Jaipur."</p>
-      </div>
-      <div class="review-author">
-        <div class="author-avatar" style="background:#7C3AED;">R</div>
-        <div class="author-info">
-          <div class="name">Riddhi Gupta</div>
-          <div class="meta">Local Guide · 15 reviews</div>
+        <div class="review-header">
+          <div class="author-avatar" style="background:#673AB7;">R</div>
+          <div class="author-meta">
+            <div class="name">Riddhi Gupta <span class="badge-guide">Local Guide</span></div>
+            <div class="review-stars-row">
+              <div class="stars">★★★★★</div>
+              <span class="review-time">· 2 months ago</span>
+            </div>
+          </div>
         </div>
+        <p class="review-text">Highly recommend Nails by Abel! The nail extension finishing is super clean and long-lasting. Abel has great knowledge about gel extensions and did exactly what I wanted. Definitely the best nail artist in Jaipur.</p>
+      </div>
+      <div class="owner-response">
+        <div class="owner-response-header">
+          <span class="owner-response-title">Response from the owner</span>
+          <span class="owner-response-time">2 months ago</span>
+        </div>
+        <p class="owner-response-text">Thank you Riddhi! It was a pleasure creating your set. We always make sure extensions are both structurally strong and clean at the cuticle line!</p>
       </div>
     </div>
   </div>
