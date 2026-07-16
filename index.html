@@ -878,11 +878,15 @@
           <span>Custom Detail</span>
         </div>
         <div class="option-pills" id="artOptions">
-          <button class="option-pill" onclick="selectCalcOption('art', 0, 0, 'Solid Glossy / Matte Finish', this)">
-            <span class="opt-name">Solid / Single Color</span>
+          <button class="option-pill active" onclick="selectCalcOption('art', 0, 0, 'Solid / Single Colour', this)">
+            <span class="opt-name">Solid / Single Colour</span>
             <span class="opt-price">+₹0 · 0m</span>
           </button>
-          <button class="option-pill active" onclick="selectCalcOption('art', 400, 20, 'French / Glazed Chrome / Ombré', this)">
+          <button class="option-pill" onclick="selectCalcOption('art', 200, 10, 'Pastel / Multicolour', this)">
+            <span class="opt-name">Pastel / Multicolour</span>
+            <span class="opt-price">+₹200 · +10m</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('art', 400, 20, 'French / Glazed Chrome / Ombré', this)">
             <span class="opt-name">French / Chrome Ombré</span>
             <span class="opt-price">+₹400 · +20m</span>
           </button>
@@ -915,22 +919,22 @@
           </div>
           <div class="spec-row">
             <span class="label">Artistry Level:</span>
-            <span class="val" id="specArt">French / Chrome Ombré</span>
+            <span class="val" id="specArt">Solid / Single Colour</span>
           </div>
           <div class="spec-row">
             <span class="label">Est. Duration:</span>
-            <span class="val" id="specTime">80 mins</span>
+            <span class="val" id="specTime">60 mins</span>
           </div>
         </div>
 
         <div class="summary-total">
           <span class="total-label">Estimated Total:</span>
-          <span class="total-num" id="specPrice">₹1,500</span>
+          <span class="total-num" id="specPrice">₹1,100</span>
         </div>
       </div>
 
       <div>
-        <a href="https://wa.me/918732861178?text=Hi%20Abel!%20I%20designed%20my%20custom%20nail%20set%20on%20your%20website%3A%20Classic%20Acrylic%20Set%20in%20Almond%20Shape%20with%20French%20%2F%20Chrome%20Ombr%C3%A9%20(Est.%20%E2%82%B91%2C500).%20I'd%20like%20to%20book%20an%20appointment!" id="whatsappBookBtn" target="_blank" rel="noopener" class="btn-book-custom">
+        <a href="https://wa.me/918732861178?text=Hi%20Abel!%20I%20designed%20my%20custom%20nail%20set%20on%20your%20website%3A%20Classic%20Acrylic%20Set%20in%20Almond%20Shape%20with%20Solid%20%2F%20Single%20Colour%20(Est.%20%E2%82%B91%2C100).%20I'd%20like%20to%20book%20an%20appointment!" id="whatsappBookBtn" target="_blank" rel="noopener" class="btn-book-custom">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.999 0C5.373 0 0 5.373 0 12c0 2.126.554 4.195 1.603 6.002L.055 24l6.196-1.624A11.947 11.947 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 11.999 0zM12 21.821a9.816 9.816 0 0 1-5.006-1.373l-.358-.212-3.716.974.992-3.621-.233-.371A9.824 9.824 0 0 1 2.179 12C2.179 6.586 6.586 2.179 12 2.179S21.821 6.586 21.821 12 17.414 21.821 12 21.821zm5.39-7.378c-.295-.148-1.747-.862-2.018-.961-.271-.098-.468-.148-.665.148-.197.295-.762.961-.934 1.158-.172.197-.344.221-.639.074-.295-.148-1.245-.459-2.371-1.464-.877-.783-1.469-1.749-1.641-2.045-.172-.295-.018-.454.13-.601.134-.133.295-.344.443-.516.148-.172.197-.295.295-.492.098-.197.049-.369-.025-.516-.074-.148-.665-1.601-.911-2.193-.24-.576-.484-.498-.665-.507-.172-.008-.369-.008-.566-.008s-.516.074-.787.369c-.271.295-1.033 1.009-1.033 2.461s1.058 2.855 1.205 3.052c.148.197 2.083 3.181 5.045 4.461.705.305 1.255.487 1.684.624.708.225 1.353.193 1.863.117.571-.085 1.747-.714 1.993-1.404.246-.689.246-1.28.172-1.404-.074-.123-.271-.197-.566-.344z"/></svg>
           <span>Book This Set via WhatsApp</span>
         </a>
@@ -1663,9 +1667,9 @@
     basePrice: 1100,
     baseTime: 60,
     shapeName: 'Almond Shape',
-    artName: 'French / Chrome Ombré',
-    artPrice: 400,
-    artTime: 20
+    artName: 'Solid / Single Colour',
+    artPrice: 0,
+    artTime: 0
   };
 
   function selectCalcOption(type, price, time, name, el) {
