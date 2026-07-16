@@ -464,7 +464,14 @@
   .accordion-item.open .accordion-btn span.icon { transform: rotate(45deg); }
 
   /* ---------- REVIEWS & WALL OF LOVE ---------- */
-  .reviews-section { background: var(--plum); color: var(--cream); position: relative; overflow: hidden; }
+  .reviews-section { 
+    background: linear-gradient(135deg, #F3E8EE 0%, #EBE3F5 50%, #E0F2FE 100%); 
+    color: var(--ink); 
+    position: relative; 
+    overflow: hidden; 
+    border-top: 1px solid rgba(224, 152, 174, 0.15);
+    border-bottom: 1px solid rgba(224, 152, 174, 0.15);
+  }
   .reviews-marquee-container {
     overflow: hidden; width: 100%; position: relative; padding: 20px 0; margin: 0 auto;
   }
@@ -473,10 +480,10 @@
     content: ""; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
   }
   .reviews-marquee-container::before {
-    left: 0; background: linear-gradient(to right, var(--plum) 20%, transparent 100%);
+    left: 0; background: linear-gradient(to right, #F3E8EE 20%, transparent 100%);
   }
   .reviews-marquee-container::after {
-    right: 0; background: linear-gradient(to left, var(--plum) 20%, transparent 100%);
+    right: 0; background: linear-gradient(to left, #E0F2FE 20%, transparent 100%);
   }
   .reviews-marquee-track {
     display: flex; gap: 24px; width: max-content;
@@ -518,15 +525,20 @@
 
   /* Google Rating Banner */
   .google-banner {
-    max-width: 600px; margin: 56px auto 0; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15);
+    max-width: 600px; margin: 56px auto 0; background: rgba(255, 255, 255, 0.7); 
+    border: 1px solid rgba(224, 152, 174, 0.25); backdrop-filter: blur(8px);
     border-radius: 99px; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 16px;
+    flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);
   }
   .gb-left { display: flex; align-items: center; gap: 14px; }
-  .gb-score { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 600; color: #fff; line-height: 1; }
+  .gb-score { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 600; color: var(--plum); line-height: 1; }
   .gb-link {
-    font-size: 13px; font-weight: 700; color: var(--rosegold-light); text-transform: uppercase; letter-spacing: 0.08em;
-    border-bottom: 1px solid var(--rosegold-light); padding-bottom: 2px;
+    font-size: 13px; font-weight: 700; color: var(--plum); text-transform: uppercase; letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--plum); padding-bottom: 2px;
+    transition: all 250ms ease;
+  }
+  .gb-link:hover {
+    color: var(--rosegold); border-color: var(--rosegold);
   }
 
   /* ---------- VISIT / LOCATION & CONTACT ---------- */
@@ -1338,9 +1350,9 @@
 <!-- REVIEWS & WALL OF LOVE -->
 <section id="reviews" class="reviews-section">
   <div class="section-head">
-    <div class="eyebrow"><span class="line" style="background:#fff;"></span><span style="color:#fff;">Verified Love</span></div>
-    <h2 class="section-title" style="color:#fff;">Loved across <em style="color:var(--rosegold-light);">Jaipur</em></h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.8);">Read why our guests consistently rate us 4.9 out of 5 stars on Google Business Profile.</p>
+    <div class="eyebrow"><span class="line"></span><span>Verified Love</span></div>
+    <h2 class="section-title">Loved across <em>Jaipur</em></h2>
+    <p class="section-sub">Read why our guests consistently rate us 4.9 out of 5 stars on Google Business Profile.</p>
   </div>
 
   <div class="reviews-marquee-container">
