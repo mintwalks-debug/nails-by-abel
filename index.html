@@ -532,28 +532,64 @@
     box-shadow: var(--shadow-md); min-height: 400px;
   }
   .map-wrapper iframe { width: 100%; height: 100%; min-height: 400px; border: 0; }
-
-  /* ---------- FOOTER ---------- */
-  footer { background: var(--plum-dark); color: var(--cream); padding: 70px clamp(20px, 5vw, 80px) 40px; }
-  .footer-inner {
-    max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 48px;
+  footer { 
+    background: linear-gradient(to bottom, var(--plum-dark) 0%, #300C15 100%); 
+    color: var(--cream); 
+    padding: 80px clamp(20px, 5vw, 80px) 40px; 
+    border-top: 1px solid rgba(232, 125, 149, 0.15);
+    position: relative;
   }
-  .footer-col { max-width: 320px; }
-  .footer-logo { font-family: 'Fraunces', serif; font-size: 24px; color: #fff; margin-bottom: 16px; }
-  .footer-logo em { font-style: italic; color: var(--rosegold-light); }
-  .footer-col p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+  footer::before {
+    content: ""; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-shimmer) 50%, transparent);
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto; display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 56px;
+  }
+  @media (min-width: 960px) {
+    .footer-inner { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
+  }
+  .footer-col { display: flex; flex-direction: column; gap: 18px; }
+  .footer-logo { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 600; color: #fff; line-height: 1.1; }
+  .footer-logo em { font-style: italic; color: var(--rosegold-light); font-weight: 400; }
+  .footer-col p { font-size: 13.5px; color: rgba(255, 255, 255, 0.7); line-height: 1.75; }
   
-  .footer-links-group { display: flex; gap: 60px; flex-wrap: wrap; }
-  .footer-links h5 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--rosegold-light); margin-bottom: 18px; }
-  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .footer-links a { font-size: 14px; color: rgba(255,255,255,0.8); }
-  .footer-links a:hover { color: #fff; }
-
+  .footer-socials { display: flex; gap: 12px; margin-top: 8px; }
+  .social-icon-btn {
+    width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center;
+    color: var(--cream); font-size: 16px; transition: all 300ms ease;
+  }
+  .social-icon-btn:hover {
+    background: var(--rosegold); border-color: var(--rosegold); color: #fff;
+    transform: translateY(-4px); box-shadow: 0 8px 20px rgba(232, 125, 149, 0.3);
+  }
+  
+  .footer-links h5 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--rosegold-light); margin-bottom: 22px; }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .footer-links a { font-size: 14px; color: rgba(255, 255, 255, 0.75); display: inline-flex; align-items: center; gap: 0px; transition: all 250ms ease; }
+  .footer-links a::before {
+    content: "✦"; font-size: 8px; color: var(--gold-shimmer); opacity: 0; width: 0; transition: all 250ms ease; display: inline-block;
+  }
+  .footer-links a:hover { color: var(--gold-shimmer); transform: translateX(6px); }
+  .footer-links a:hover::before { opacity: 1; width: 12px; }
+  
+  .footer-info-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+  .footer-info-icon { font-size: 16px; color: var(--rosegold-light); margin-top: 2px; }
+  .footer-info-text { font-size: 13.5px; color: rgba(255, 255, 255, 0.75); line-height: 1.6; }
+  .footer-info-text strong { color: #fff; font-weight: 600; display: block; margin-bottom: 2px; }
+  
   .footer-bottom {
     max-width: 1200px; margin: 32px auto 0; display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(255,255,255,0.5);
+    align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12.5px; color: rgba(255, 255, 255, 0.45);
   }
+  .back-to-top {
+    font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--rosegold-light);
+    display: inline-flex; align-items: center; gap: 6px; transition: all 250ms ease;
+  }
+  .back-to-top:hover { color: #fff; transform: translateY(-3px); }
 
   /* ---------- LIGHTBOX MODAL ---------- */
   .lightbox-modal {
@@ -1406,37 +1442,62 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
+    <!-- Col 1: Brand & socials -->
     <div class="footer-col">
       <div class="footer-logo">Nails <em>by</em> Abel</div>
-      <p>Precision nail extensions, therapeutic dry e-file manicures, and bespoke hand-painted nail art in Mansarovar, Jaipur.</p>
+      <p>Precision nail extensions, therapeutic dry e-file manicures, and bespoke hand-painted nail art in Mansarovar, Jaipur. Dedicated to structural strength and clean cuticle craftsmanship.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">📸</a>
+        <a href="https://wa.me/918732861178" target="_blank" rel="noopener" class="social-icon-btn" aria-label="WhatsApp">💬</a>
+        <a href="https://maps.google.com/?q=Nails+by+Abel+Mansarovar+Jaipur" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Location Map">📍</a>
+      </div>
     </div>
 
-    <div class="footer-links-group">
-      <div class="footer-links">
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#calculator">Price Calculator</a></li>
-          <li><a href="#gallery">Lookbook Gallery</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#reviews">Client Reviews</a></li>
-        </ul>
-      </div>
+    <!-- Col 2: Services -->
+    <div class="footer-links">
+      <h5>Our Services</h5>
+      <ul>
+        <li><a href="#services">Soft Gel Extensions</a></li>
+        <li><a href="#services">Sculpted Hard Gel</a></li>
+        <li><a href="#services">Classic Acrylic Sets</a></li>
+        <li><a href="#services">Dry Russian Prep</a></li>
+      </ul>
+    </div>
 
-      <div class="footer-links">
-        <h5>Contact Studio</h5>
-        <ul>
-          <li><a href="tel:+918732861178">087328 61178</a></li>
-          <li><a href="https://wa.me/918732861178">WhatsApp Booking</a></li>
-          <li><a href="#visit">Mansarovar, Jaipur</a></li>
-          <li><a href="https://instagram.com" target="_blank">Instagram Portfolio</a></li>
-        </ul>
+    <!-- Col 3: Explore -->
+    <div class="footer-links">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#calculator">Price Calculator</a></li>
+        <li><a href="#gallery">Lookbook Gallery</a></li>
+        <li><a href="#reviews">Verified Reviews</a></li>
+        <li><a href="#visit">Book Studio Slot</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Studio info -->
+    <div class="footer-links">
+      <h5>Studio Details</h5>
+      <div class="footer-info-item">
+        <span class="footer-info-icon">📍</span>
+        <div class="footer-info-text">
+          <strong>Location</strong>
+          150/2, Shipra Path, Sector 7, Mansarovar, Jaipur, 302020
+        </div>
+      </div>
+      <div class="footer-info-item">
+        <span class="footer-info-icon">🕒</span>
+        <div class="footer-info-text">
+          <strong>Operating Hours</strong>
+          Open Daily · 11:00 AM – 10:00 PM
+        </div>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <span>© 2026 Nails by Abel. All rights reserved.</span>
-    <span>Sector 7, Shipra Path, Mansarovar, Jaipur</span>
+    <span>© 2026 Nails by Abel. Crafted for luxury and precision. All rights reserved.</span>
+    <a href="#hero" class="back-to-top">Back to top ↑</a>
   </div>
 </footer>
 
