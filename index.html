@@ -14,23 +14,23 @@
 
 <style>
   :root {
-    --cream: #FAF7F5;
-    --cream-soft: #F2EAE4;
+    --cream: #FAF9F6;
+    --cream-soft: #EBE9E2;
     --cream-card: #FFFFFF;
-    --ink: #431A24;
-    --ink-soft: #76424E;
-    --plum: #B94F68;
-    --plum-dark: #541523;
-    --rosegold: #E87D95;
-    --rosegold-light: #FFAEC1;
-    --rosegold-glow: rgba(232, 125, 149, 0.25);
-    --gold-shimmer: #ECC472;
-    --blush: #FFEBEF;
-    --border-gold: rgba(232, 125, 149, 0.24);
+    --ink: #1F2E26;
+    --ink-soft: #4E5F55;
+    --plum: #4A705E;
+    --plum-dark: #162B21;
+    --rosegold: #C8B282;
+    --rosegold-light: #EBE2CE;
+    --rosegold-glow: rgba(200, 178, 130, 0.25);
+    --gold-shimmer: #C8B282;
+    --blush: #F4F6F4;
+    --border-gold: rgba(200, 178, 130, 0.3);
     --border-light: rgba(255, 255, 255, 0.7);
-    --shadow-sm: 0 4px 20px -4px rgba(67, 26, 36, 0.08);
-    --shadow-md: 0 16px 40px -10px rgba(67, 26, 36, 0.14);
-    --shadow-lg: 0 30px 70px -15px rgba(67, 26, 36, 0.28);
+    --shadow-sm: 0 4px 20px -4px rgba(31, 46, 38, 0.08);
+    --shadow-md: 0 16px 40px -10px rgba(31, 46, 38, 0.14);
+    --shadow-lg: 0 30px 70px -15px rgba(31, 46, 38, 0.28);
     --radius-sm: 12px;
     --radius-md: 20px;
     --radius-lg: 32px;
@@ -54,10 +54,10 @@
 
   /* ---------- subtle luxury background texture ---------- */
   .bg-mesh {
-    position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.45;
-    background: radial-gradient(circle at 10% 15%, rgba(232, 125, 149, 0.22) 0%, transparent 40%),
-                radial-gradient(circle at 90% 85%, rgba(255, 174, 193, 0.25) 0%, transparent 45%),
-                radial-gradient(circle at 50% 50%, rgba(236, 196, 114, 0.12) 0%, transparent 60%);
+    position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.4;
+    background: radial-gradient(circle at 10% 15%, rgba(74, 112, 94, 0.15) 0%, transparent 40%), /* Sage */
+                radial-gradient(circle at 90% 85%, rgba(200, 178, 130, 0.18) 0%, transparent 45%), /* Gold */
+                radial-gradient(circle at 50% 50%, rgba(31, 46, 38, 0.08) 0%, transparent 60%); /* Deep Forest */
   }
   .content-wrap { position: relative; z-index: 10; }
 
@@ -69,11 +69,11 @@
     transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
   }
   header.site-header.scrolled {
-    background: rgba(252, 248, 245, 0.88);
+    background: rgba(250, 249, 246, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 14px clamp(20px, 5vw, 80px);
-    box-shadow: 0 4px 30px rgba(34, 20, 25, 0.06);
+    box-shadow: 0 4px 30px rgba(31, 46, 38, 0.06);
     border-bottom: 1px solid var(--border-gold);
   }
   .brand-logo {
@@ -520,10 +520,10 @@
   }
   .map-wrapper iframe { width: 100%; height: 100%; min-height: 400px; border: 0; }
   footer { 
-    background: linear-gradient(to bottom, var(--plum-dark) 0%, #300C15 100%); 
+    background: linear-gradient(to bottom, var(--plum-dark) 0%, #0D1913 100%); 
     color: var(--cream); 
     padding: 80px clamp(20px, 5vw, 80px) 40px; 
-    border-top: 1px solid rgba(232, 125, 149, 0.15);
+    border-top: 1px solid var(--border-gold);
     position: relative;
   }
   footer::before {
@@ -643,7 +643,7 @@
   .whatsapp-tooltip {
     position: absolute;
     right: 70px;
-    background: #431A24;
+    background: var(--ink);
     color: #fff;
     padding: 8px 14px;
     border-radius: 8px;
