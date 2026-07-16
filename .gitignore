@@ -1,0 +1,11 @@
+# Ignore scraped/saved backup files
+*_files/
+*.html
+!index.html
+*.zip
+New folder/
+.DS_Store
+Thumbs.db
+
+.vercel
+.env*.local

@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nails by Abel — Best Nail Salon in Mansarovar, Jaipur</title>
+<meta name="description" content="Nails by Abel — Premier Nail Art Studio in Mansarovar, Jaipur. Acrylic Nails, Hard Gel Extensions, Soft Gel Tips, Hand-Painted Art, 3D Charms & Cat-Eye Chrome. Rated 4.9★ on Google." />
+<meta name="keywords" content="Nails by Abel, nail salon Jaipur, best nail salon Mansarovar, acrylic nails Jaipur, gel nails, hand painted nail art, nail extensions Jaipur" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --cream: #FFF5F6;
+    --cream-soft: #FFE3E7;
+    --cream-card: #FFF0F3;
+    --ink: #431A24;
+    --ink-soft: #76424E;
+    --plum: #B94F68;
+    --plum-dark: #541523;
+    --rosegold: #E87D95;
+    --rosegold-light: #FFAEC1;
+    --rosegold-glow: rgba(232, 125, 149, 0.25);
+    --gold-shimmer: #ECC472;
+    --blush: #FFEBEF;
+    --border-gold: rgba(232, 125, 149, 0.24);
+    --border-light: rgba(255, 255, 255, 0.7);
+    --shadow-sm: 0 4px 20px -4px rgba(67, 26, 36, 0.08);
+    --shadow-md: 0 16px 40px -10px rgba(67, 26, 36, 0.14);
+    --shadow-lg: 0 30px 70px -15px rgba(67, 26, 36, 0.28);
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 32px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  .font-display { font-family: 'Fraunces', serif; }
+  a { color: inherit; text-decoration: none; transition: all 0.25s ease; }
+  button { cursor: pointer; font-family: inherit; border: none; background: none; }
+  img { max-width: 100%; display: block; height: auto; }
+  ::selection { background: var(--rosegold); color: #fff; }
+
+  /* ---------- subtle luxury background texture ---------- */
+  .bg-mesh {
+    position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.45;
+    background: radial-gradient(circle at 10% 15%, rgba(232, 125, 149, 0.22) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(255, 174, 193, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(236, 196, 114, 0.12) 0%, transparent 60%);
+  }
+  .content-wrap { position: relative; z-index: 10; }
+
+  /* ---------- NAVIGATION ---------- */
+  header.site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 24px clamp(20px, 5vw, 80px);
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  header.site-header.scrolled {
+    background: rgba(252, 248, 245, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 14px clamp(20px, 5vw, 80px);
+    box-shadow: 0 4px 30px rgba(34, 20, 25, 0.06);
+    border-bottom: 1px solid var(--border-gold);
+  }
+  .brand-logo {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .brand-logo .text {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .brand-logo .text em { font-style: italic; color: var(--rosegold); font-weight: 450; }
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 99px;
+    background: rgba(34, 197, 94, 0.12); color: #15803d; border: 1px solid rgba(34, 197, 94, 0.25);
+  }
+  .status-pill .dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #22c55e;
+    animation: pulse-green 2s infinite;
+  }
+  @keyframes pulse-green {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+  }
+
+  nav.nav-links {
+    display: flex; gap: 36px; font-size: 13.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  nav.nav-links a {
+    position: relative; padding: 4px 0; color: var(--ink); opacity: 0.85;
+  }
+  nav.nav-links a:hover { opacity: 1; color: var(--rosegold); }
+  nav.nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px;
+    background: var(--rosegold); transition: width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  nav.nav-links a:hover::after { width: 100%; }
+
+  .nav-actions { display: flex; align-items: center; gap: 14px; }
+  .btn-call {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 99px;
+    background: var(--plum); color: var(--cream);
+    box-shadow: 0 4px 15px rgba(50, 22, 34, 0.25);
+    transition: all 300ms ease;
+  }
+  .btn-call:hover {
+    background: var(--rosegold); transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(197, 123, 93, 0.4);
+  }
+  .mobile-menu-btn { display: none; font-size: 24px; color: var(--ink); }
+
+  @media (max-width: 900px) {
+    nav.nav-links { display: none; }
+    .status-pill { display: none; }
+    .mobile-menu-btn { display: block; }
+  }
+
+  /* ---------- HERO SECTION ---------- */
+  .hero-section {
+    position: relative; min-height: 100svh; padding: 120px clamp(20px, 5vw, 80px) 80px;
+    display: flex; align-items: center; justify-content: space-between; gap: 40px;
+    overflow: hidden;
+  }
+  .hero-bg-ghost {
+    position: absolute; top: 46%; left: 50%; transform: translate(-50%, -50%);
+    font-family: 'Fraunces', serif; font-size: clamp(80px, 18vw, 240px); font-weight: 300;
+    font-style: italic; color: rgba(197, 123, 93, 0.07); white-space: nowrap; pointer-events: none;
+    z-index: 0; letter-spacing: -0.03em;
+  }
+  .hero-left {
+    flex: 1.1; max-width: 640px; z-index: 10;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--rosegold); margin-bottom: 20px;
+  }
+  .hero-eyebrow .line { width: 32px; height: 1.5px; background: var(--rosegold); }
+  
+  .hero-title {
+    font-family: 'Fraunces', serif; font-size: clamp(38px, 5.5vw, 68px); font-weight: 450;
+    line-height: 1.06; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 24px;
+  }
+  .hero-title em { font-style: italic; color: var(--rosegold); font-weight: 400; }
+  
+  .hero-desc {
+    font-size: clamp(16px, 1.3vw, 19px); line-height: 1.7; color: var(--ink-soft);
+    margin-bottom: 36px; max-width: 540px;
+  }
+
+  .hero-cta-group {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 48px;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; padding: 16px 34px; border-radius: 99px;
+    background: var(--plum); color: #fff;
+    box-shadow: 0 10px 30px rgba(50, 22, 34, 0.3);
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-primary:hover {
+    background: var(--rosegold); transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(197, 123, 93, 0.45);
+  }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; padding: 16px 34px; border-radius: 99px;
+    background: transparent; color: var(--plum); border: 1.5px solid var(--border-gold);
+    transition: all 300ms ease;
+  }
+  .btn-secondary:hover {
+    background: var(--cream-soft); border-color: var(--rosegold); transform: translateY(-2px);
+  }
+
+  /* Stats Ribbon */
+  .hero-stats {
+    display: flex; align-items: center; gap: 28px; padding-top: 28px;
+    border-top: 1px solid var(--border-gold);
+  }
+  .stat-item { display: flex; flex-direction: column; }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: var(--plum); line-height: 1; }
+  .stat-num em { font-style: normal; color: var(--rosegold); font-size: 24px; }
+  .stat-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 6px; }
+
+  /* Hero Right - Interactive Showcase */
+  .hero-right {
+    flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 10;
+  }
+  .showcase-container {
+    position: relative; width: 100%; max-width: 480px;
+  }
+  .showcase-card {
+    position: relative; aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-lg); border: 6px solid #fff;
+    background: #111;
+  }
+  .showcase-card img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .showcase-card:hover img { transform: scale(1.05); }
+
+  .showcase-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 24px 24px;
+    background: linear-gradient(180deg, transparent 0%, rgba(30, 12, 19, 0.88) 100%);
+    color: #fff; display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .showcase-info h3 { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; margin-bottom: 4px; }
+  .showcase-info p { font-size: 13px; opacity: 0.85; letter-spacing: 0.05em; text-transform: uppercase; }
+  
+  .showcase-badge {
+    background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px);
+    padding: 8px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+  }
+
+  /* Swatch Bar under Showcase */
+  .swatch-bar {
+    display: flex; align-items: center; gap: 12px; margin-top: 24px;
+    background: rgba(255,255,255,0.7); padding: 10px 18px; border-radius: 99px;
+    border: 1px solid var(--border-gold); box-shadow: var(--shadow-sm);
+  }
+  .swatch-item {
+    width: 38px; height: 38px; border-radius: 50%; overflow: hidden; border: 2px solid transparent;
+    cursor: pointer; transition: all 250ms ease; position: relative;
+  }
+  .swatch-item.active { border-color: var(--rosegold); transform: scale(1.15); box-shadow: 0 4px 12px var(--rosegold-glow); }
+  .swatch-item img { width: 100%; height: 100%; object-fit: cover; }
+  .swatch-label { font-size: 12.5px; font-weight: 700; color: var(--plum); padding-left: 6px; }
+
+  @media (max-width: 980px) {
+    .hero-section { flex-direction: column; padding-top: 110px; text-align: center; }
+    .hero-left { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .hero-cta-group, .hero-stats { justify-content: center; width: 100%; }
+    .showcase-container { max-width: 400px; }
+  }
+
+  /* ---------- MARQUEE BANNER ---------- */
+  .marquee-band {
+    background: var(--plum); color: var(--cream); padding: 20px 0; overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .marquee-content {
+    display: flex; width: max-content; animation: scroll-marquee 32s linear infinite;
+  }
+  .marquee-item {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 400; padding: 0 36px; display: flex; align-items: center; gap: 36px; opacity: 0.92;
+  }
+  .marquee-item::after {
+    content: '✦'; font-family: 'Plus Jakarta Sans', sans-serif; font-style: normal;
+    font-size: 14px; color: var(--rosegold-light); opacity: 0.8;
+  }
+  @keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ---------- SECTION HEADERS & UTILS ---------- */
+  section { padding: 100px clamp(20px, 5vw, 80px); position: relative; }
+  .section-head {
+    max-width: 680px; margin: 0 auto 64px; text-align: center;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--rosegold); margin-bottom: 14px;
+  }
+  .eyebrow .line { width: 24px; height: 1.5px; background: var(--rosegold); }
+  .section-title {
+    font-family: 'Fraunces', serif; font-size: clamp(34px, 4.5vw, 56px); font-weight: 450;
+    line-height: 1.1; letter-spacing: -0.02em; color: var(--plum);
+  }
+  .section-title em { font-style: italic; color: var(--rosegold); font-weight: 400; }
+  .section-sub {
+    font-size: 16px; color: var(--ink-soft); margin-top: 16px; line-height: 1.7;
+  }
+
+  /* ---------- INTERACTIVE PRICE CALCULATOR ("DESIGN YOUR SET") ---------- */
+  .calc-section { background: var(--cream-soft); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold); }
+  .calc-grid {
+    display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1100px; margin: 0 auto;
+    background: #fff; border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 56px);
+    box-shadow: var(--shadow-md); border: 1px solid var(--border-gold);
+  }
+  @media (min-width: 900px) { .calc-grid { grid-template-columns: 1.3fr 0.9fr; align-items: start; } }
+
+  .calc-step { margin-bottom: 32px; }
+  .calc-step:last-child { margin-bottom: 0; }
+  .calc-step-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .calc-step-header h4 { font-size: 16px; font-weight: 700; color: var(--plum); }
+  .calc-step-header span { font-size: 12px; font-weight: 600; color: var(--rosegold); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .option-pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+  .option-pill {
+    padding: 14px 16px; border-radius: var(--radius-sm); border: 1.5px solid #EAE0D8;
+    background: var(--cream); text-align: left; transition: all 200ms ease;
+  }
+  .option-pill:hover { border-color: var(--rosegold); background: #FFF9F5; }
+  .option-pill.active {
+    border-color: var(--plum); background: var(--plum); color: #fff;
+    box-shadow: 0 6px 16px rgba(50, 22, 34, 0.2);
+  }
+  .option-pill .opt-name { font-weight: 700; font-size: 13.5px; display: block; margin-bottom: 4px; }
+  .option-pill .opt-price { font-size: 12px; opacity: 0.8; font-weight: 600; }
+
+  /* Summary Card in Calculator */
+  .calc-summary {
+    background: var(--cream-card); border-radius: var(--radius-md); padding: 36px 30px;
+    border: 1px solid var(--border-gold); display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .summary-badge {
+    display: inline-block; padding: 6px 14px; border-radius: 99px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em; background: var(--rosegold); color: #fff;
+    margin-bottom: 20px; align-self: flex-start;
+  }
+  .summary-title { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 500; color: var(--plum); margin-bottom: 16px; }
+  
+  .summary-specs { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; border-top: 1px dashed var(--border-gold); border-bottom: 1px dashed var(--border-gold); padding: 18px 0; }
+  .spec-row { display: flex; justify-content: space-between; font-size: 14px; }
+  .spec-row .label { color: var(--ink-soft); font-weight: 500; }
+  .spec-row .val { font-weight: 700; color: var(--plum); text-align: right; }
+
+  .summary-total { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 28px; }
+  .total-label { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-soft); }
+  .total-num { font-family: 'Fraunces', serif; font-size: 42px; font-weight: 600; color: var(--rosegold); }
+
+  .btn-book-custom {
+    width: 100%; padding: 18px; border-radius: 99px; background: #25D366; color: #fff;
+    font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); transition: all 300ms ease;
+  }
+  .btn-book-custom:hover { background: #1ebd5b; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45); }
+
+  /* ---------- GALLERY LOOKBOOK ---------- */
+  .filter-tabs {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 48px;
+  }
+  .filter-btn {
+    padding: 10px 22px; border-radius: 99px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; background: var(--cream-soft); color: var(--ink-soft);
+    border: 1px solid transparent; transition: all 250ms ease;
+  }
+  .filter-btn:hover { background: #fff; color: var(--plum); border-color: var(--border-gold); }
+  .filter-btn.active {
+    background: var(--plum); color: #fff; box-shadow: 0 6px 18px rgba(50, 22, 34, 0.2);
+  }
+
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+    max-width: 1300px; margin: 0 auto;
+  }
+  .gallery-card {
+    position: relative; aspect-ratio: 4/5; border-radius: var(--radius-md); overflow: hidden;
+    cursor: pointer; box-shadow: var(--shadow-sm); border: 1px solid var(--border-gold);
+    background: #111;
+  }
+  .gallery-card img {
+    width: 100%; height: 100%; object-fit: cover; transition: all 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .gallery-card:hover img { transform: scale(1.08); filter: brightness(0.92); }
+
+  .gallery-overlay {
+    position: absolute; inset: 0; background: linear-gradient(0deg, rgba(30, 12, 19, 0.85) 0%, rgba(30,12,19,0.2) 50%, transparent 100%);
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 24px;
+    opacity: 0; transition: opacity 300ms ease;
+  }
+  .gallery-card:hover .gallery-overlay { opacity: 1; }
+  
+  .gallery-tag {
+    display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--rosegold-light); margin-bottom: 6px;
+  }
+  .gallery-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500; color: #fff; }
+  .zoom-icon {
+    position: absolute; top: 18px; right: 18px; width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); display: flex;
+    align-items: center; justify-content: center; color: #fff; opacity: 0; transform: scale(0.8);
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .gallery-card:hover .zoom-icon { opacity: 1; transform: scale(1); }
+
+  /* ---------- SERVICES & COMPARISON ---------- */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 28px;
+    max-width: 1200px; margin: 0 auto 70px;
+  }
+  .service-card {
+    background: #fff; border-radius: var(--radius-md); padding: 40px 32px;
+    border: 1px solid var(--border-gold); box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: all 300ms ease; position: relative; overflow: hidden;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--rosegold); }
+  .service-card.featured::before {
+    content: 'Most Popular'; position: absolute; top: 18px; right: -32px;
+    background: var(--rosegold); color: #fff; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 36px;
+    transform: rotate(45deg);
+  }
+
+  .service-num { font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; color: var(--rosegold); margin-bottom: 16px; }
+  .service-card h3 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 500; color: var(--plum); margin-bottom: 12px; }
+  .service-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 24px; }
+  
+  .service-specs { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .service-specs li { font-size: 13px; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .service-specs li::before { content: '✓'; color: var(--rosegold); font-weight: 800; }
+
+  .service-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #F0E6DE; padding-top: 20px; }
+  .service-price { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; color: var(--plum); }
+  .service-price span { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+
+  /* Nail Care Accordion */
+  .care-box {
+    max-width: 860px; margin: 0 auto; background: var(--cream-card); border-radius: var(--radius-md);
+    padding: 40px; border: 1px solid var(--border-gold);
+  }
+  .care-box h3 { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; color: var(--plum); margin-bottom: 24px; text-align: center; }
+  .accordion-item { border-bottom: 1px solid var(--border-gold); padding: 18px 0; }
+  .accordion-item:last-child { border-bottom: none; }
+  .accordion-btn {
+    width: 100%; display: flex; justify-content: space-between; align-items: center;
+    font-size: 16px; font-weight: 700; color: var(--plum); text-align: left;
+  }
+  .accordion-btn span.icon { font-size: 20px; color: var(--rosegold); transition: transform 300ms ease; }
+  .accordion-content { font-size: 14px; color: var(--ink-soft); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 350ms ease; }
+  .accordion-item.open .accordion-content { max-height: 200px; padding-top: 12px; }
+  .accordion-item.open .accordion-btn span.icon { transform: rotate(45deg); }
+
+  /* ---------- REVIEWS & WALL OF LOVE ---------- */
+  .reviews-section { background: var(--plum); color: var(--cream); }
+  .review-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 24px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .review-card {
+    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md); padding: 32px 28px; display: flex; flex-direction: column;
+    justify-content: space-between; position: relative;
+  }
+  .stars { color: var(--gold-shimmer); font-size: 16px; letter-spacing: 2px; margin-bottom: 16px; }
+  .review-text { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; line-height: 1.6; color: #fff; margin-bottom: 24px; }
+  .review-author { display: flex; align-items: center; gap: 14px; }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--rosegold);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; color: #fff;
+  }
+  .author-info .name { font-weight: 700; font-size: 15px; color: #fff; }
+  .author-info .meta { font-size: 12px; color: var(--rosegold-light); opacity: 0.8; }
+
+  /* Google Rating Banner */
+  .google-banner {
+    max-width: 600px; margin: 56px auto 0; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 99px; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .gb-left { display: flex; align-items: center; gap: 14px; }
+  .gb-score { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 600; color: #fff; line-height: 1; }
+  .gb-link {
+    font-size: 13px; font-weight: 700; color: var(--rosegold-light); text-transform: uppercase; letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--rosegold-light); padding-bottom: 2px;
+  }
+
+  /* ---------- VISIT / LOCATION & CONTACT ---------- */
+  .visit-grid {
+    display: grid; grid-template-columns: 1fr; gap: 48px; max-width: 1200px; margin: 0 auto;
+  }
+  @media (min-width: 900px) { .visit-grid { grid-template-columns: 1fr 1.1fr; align-items: stretch; } }
+
+  .contact-details { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .info-box {
+    display: flex; gap: 18px; padding: 22px; border-radius: var(--radius-sm);
+    background: #fff; border: 1px solid var(--border-gold); box-shadow: var(--shadow-sm);
+  }
+  .info-icon {
+    width: 48px; height: 48px; border-radius: 50%; background: var(--cream-soft);
+    display: flex; align-items: center; justify-content: center; color: var(--rosegold); flex-shrink: 0; font-size: 22px;
+  }
+  .info-text .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); margin-bottom: 4px; }
+  .info-text .value { font-size: 16px; font-weight: 600; color: var(--plum); }
+  .info-text .sub { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+
+  .map-wrapper {
+    border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-gold);
+    box-shadow: var(--shadow-md); min-height: 400px;
+  }
+  .map-wrapper iframe { width: 100%; height: 100%; min-height: 400px; border: 0; }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--plum-dark); color: var(--cream); padding: 70px clamp(20px, 5vw, 80px) 40px; }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 48px;
+  }
+  .footer-col { max-width: 320px; }
+  .footer-logo { font-family: 'Fraunces', serif; font-size: 24px; color: #fff; margin-bottom: 16px; }
+  .footer-logo em { font-style: italic; color: var(--rosegold-light); }
+  .footer-col p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+  
+  .footer-links-group { display: flex; gap: 60px; flex-wrap: wrap; }
+  .footer-links h5 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--rosegold-light); margin-bottom: 18px; }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a { font-size: 14px; color: rgba(255,255,255,0.8); }
+  .footer-links a:hover { color: #fff; }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 32px auto 0; display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(255,255,255,0.5);
+  }
+
+  /* ---------- LIGHTBOX MODAL ---------- */
+  .lightbox-modal {
+    position: fixed; inset: 0; z-index: 1000; background: rgba(20, 8, 13, 0.94);
+    backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 300ms ease; padding: 24px;
+  }
+  .lightbox-modal.open { opacity: 1; pointer-events: auto; }
+  
+  .lightbox-content {
+    background: var(--cream); border-radius: var(--radius-md); max-width: 960px; width: 100%;
+    display: grid; grid-template-columns: 1fr; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+  }
+  @media (min-width: 768px) { .lightbox-content { grid-template-columns: 1.2fr 0.8fr; } }
+  
+  .lightbox-img-wrap { background: #111; max-height: 80vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .lightbox-img-wrap img { max-height: 80vh; width: 100%; object-fit: contain; }
+  
+  .lightbox-details { padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%;
+    background: var(--cream-soft); display: flex; align-items: center; justify-content: center;
+    font-size: 20px; color: var(--plum); cursor: pointer; transition: all 200ms ease;
+  }
+  .lightbox-close:hover { background: var(--rosegold); color: #fff; }
+  
+  .lb-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--rosegold); margin-bottom: 8px; }
+  .lb-title { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 500; color: var(--plum); margin-bottom: 16px; }
+  .lb-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 24px; }
+  
+  .lb-specs { border-top: 1px solid var(--border-gold); padding-top: 20px; margin-bottom: 28px; }
+  .lb-spec-row { display: flex; justify-content: space-between; font-size: 13.5px; margin-bottom: 10px; }
+  .lb-spec-row .label { color: var(--ink-soft); font-weight: 500; }
+  .lb-spec-row .val { font-weight: 700; color: var(--plum); }
+</style>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <a href="#hero" class="brand-logo">
+    <span class="text">Nails <em>by</em> Abel</span>
+    <span class="status-pill"><span class="dot"></span> Open Today · Closes 10 PM</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#calculator">Custom Set Calculator</a>
+    <a href="#gallery">Lookbook</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Visit & Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="tel:+918732861178" class="btn-call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+      <span>087328 61178</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section" id="hero">
+  <div class="hero-bg-ghost" id="heroGhost">HAND-PAINTED</div>
+  
+  <div class="hero-left content-wrap">
+    <div class="hero-eyebrow">
+      <span class="line"></span>
+      <span>Mansarovar, Jaipur · Premier Nail Artistry</span>
+    </div>
+    <h1 class="hero-title">
+      Hand-painted nail art, worn like <em>fine jewellery.</em>
+    </h1>
+    <p class="hero-desc">
+      Acrylic and gel extensions, custom 3D charms, velvet cat-eye, and flawless French ombré sets — sculpted unhurried by Abel, one guest at a time.
+    </p>
+    
+    <div class="hero-cta-group">
+      <a href="#calculator" class="btn-primary">
+        <span>Design Your Set & Estimate</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#gallery" class="btn-secondary">Explore Lookbook</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">4.9<em>★</em></span>
+        <span class="stat-label">Google Rating (68+ Reviews)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1,200<em>+</em></span>
+        <span class="stat-label">Custom Sets Crafted</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100<em>%</em></span>
+        <span class="stat-label">Hand-Painted Detail</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right content-wrap">
+    <div class="showcase-container">
+      <div class="showcase-card" id="showcaseCard" onclick="openLightboxFromHero()">
+        <img src="Screenshot_30.png" id="heroShowcaseImg" alt="Sapphire Princess Bow 3D Nails by Abel" />
+        <div class="showcase-overlay">
+          <div class="showcase-info">
+            <h3 id="showcaseTitle">Sapphire Princess Bow 3D</h3>
+            <p id="showcaseTech">Sculpted Hard Gel · 3D Crystal Charms</p>
+          </div>
+          <span class="showcase-badge">Featured Set</span>
+        </div>
+      </div>
+
+      <!-- Swatch Bar -->
+      <div class="swatch-bar">
+        <div class="swatch-item active" onclick="setHeroShowcase(0, this)" title="Sapphire Princess Bow">
+          <img src="Screenshot_30.png" alt="Sapphire" />
+        </div>
+        <div class="swatch-item" onclick="setHeroShowcase(1, this)" title="Velvet Cat-Eye">
+          <img src="Screenshot_25.png" alt="Velvet" />
+        </div>
+        <div class="swatch-item" onclick="setHeroShowcase(2, this)" title="3D Floral French">
+          <img src="Screenshot_22.png" alt="3D Floral" />
+        </div>
+        <div class="swatch-item" onclick="setHeroShowcase(3, this)" title="Tropical Sunset">
+          <img src="Screenshot_28.png" alt="Tropical" />
+        </div>
+        <div class="swatch-item" onclick="setHeroShowcase(4, this)" title="Sage Gold Chrome">
+          <img src="Screenshot_31.png" alt="Sage" />
+        </div>
+        <span class="swatch-label" id="swatchLabel">Click to preview</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE BAND -->
+<div class="marquee-band">
+  <div class="marquee-content">
+    <span class="marquee-item">Acrylic Extensions</span>
+    <span class="marquee-item">Hard Gel Sculpting</span>
+    <span class="marquee-item">3D Crystal Charms</span>
+    <span class="marquee-item">Velvet Magnetic Cat-Eye</span>
+    <span class="marquee-item">Glazed Donut Chrome</span>
+    <span class="marquee-item">Custom Hand-Painted Art</span>
+    <span class="marquee-item">Flawless French Ombré</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="marquee-item">Acrylic Extensions</span>
+    <span class="marquee-item">Hard Gel Sculpting</span>
+    <span class="marquee-item">3D Crystal Charms</span>
+    <span class="marquee-item">Velvet Magnetic Cat-Eye</span>
+    <span class="marquee-item">Glazed Donut Chrome</span>
+    <span class="marquee-item">Custom Hand-Painted Art</span>
+    <span class="marquee-item">Flawless French Ombré</span>
+  </div>
+</div>
+
+<!-- INTERACTIVE PRICE CALCULATOR ("DESIGN YOUR SET") -->
+<section id="calculator" class="calc-section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="line"></span><span>Interactive Estimator</span></div>
+    <h2 class="section-title">Design Your Set & <em>Estimate Price</em></h2>
+    <p class="section-sub">Select your length, shape, and desired artistry level to instantly calculate an estimated cost and duration before your salon visit.</p>
+  </div>
+
+  <div class="calc-grid">
+    <div class="calc-options">
+      <!-- Step 1: Base & Length -->
+      <div class="calc-step">
+        <div class="calc-step-header">
+          <h4>1. Select Service & Length</h4>
+          <span>Base System</span>
+        </div>
+        <div class="option-pills" id="baseOptions">
+          <button class="option-pill" onclick="selectCalcOption('base', 999, 45, 'Soft Gel Overlay / Tips', this)">
+            <span class="opt-name">Soft Gel Overlay</span>
+            <span class="opt-price">₹999 · 45 mins</span>
+          </button>
+          <button class="option-pill active" onclick="selectCalcOption('base', 1100, 60, 'Short / Medium Acrylic Extensions', this)">
+            <span class="opt-name">Classic Acrylic Set</span>
+            <span class="opt-price">₹1,100 · 60 mins</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('base', 1300, 70, 'Hard Gel Sculpted Extensions', this)">
+            <span class="opt-name">Hard Gel Sculpting</span>
+            <span class="opt-price">₹1,300 · 70 mins</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('base', 1600, 85, 'XL / Stiletto Dramatic Extensions', this)">
+            <span class="opt-name">XL Dramatic Length</span>
+            <span class="opt-price">₹1,600 · 85 mins</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Shape -->
+      <div class="calc-step">
+        <div class="calc-step-header">
+          <h4>2. Choose Nail Shape</h4>
+          <span>Shaping</span>
+        </div>
+        <div class="option-pills" id="shapeOptions">
+          <button class="option-pill active" onclick="selectCalcOption('shape', 0, 0, 'Almond Shape', this)">
+            <span class="opt-name">Almond</span>
+            <span class="opt-price">Included</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('shape', 0, 0, 'Coffin / Ballerina Shape', this)">
+            <span class="opt-name">Coffin / Ballerina</span>
+            <span class="opt-price">Included</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('shape', 0, 0, 'Stiletto Shape', this)">
+            <span class="opt-name">Stiletto</span>
+            <span class="opt-price">Included</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('shape', 0, 0, 'Square / Tapered Shape', this)">
+            <span class="opt-name">Square / Tapered</span>
+            <span class="opt-price">Included</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Art & Finish Level -->
+      <div class="calc-step">
+        <div class="calc-step-header">
+          <h4>3. Artistry & Finish Level</h4>
+          <span>Custom Detail</span>
+        </div>
+        <div class="option-pills" id="artOptions">
+          <button class="option-pill" onclick="selectCalcOption('art', 0, 0, 'Solid Glossy / Matte Finish', this)">
+            <span class="opt-name">Solid / Single Color</span>
+            <span class="opt-price">+₹0 · 0m</span>
+          </button>
+          <button class="option-pill active" onclick="selectCalcOption('art', 400, 20, 'French / Glazed Chrome / Ombré', this)">
+            <span class="opt-name">French / Chrome Ombré</span>
+            <span class="opt-price">+₹400 · +20m</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('art', 800, 35, 'Velvet Cat-Eye / Hand-Painted Swirls', this)">
+            <span class="opt-name">Cat-Eye / Hand-Painted</span>
+            <span class="opt-price">+₹800 · +35m</span>
+          </button>
+          <button class="option-pill" onclick="selectCalcOption('art', 1200, 50, 'Full 3D Charms, Crystals & Intricate Art', this)">
+            <span class="opt-name">3D Charms & Crystals</span>
+            <span class="opt-price">+₹1,200 · +50m</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Summary Card -->
+    <div class="calc-summary">
+      <div>
+        <span class="summary-badge">Custom Specification</span>
+        <h3 class="summary-title">Your Custom Set Summary</h3>
+        
+        <div class="summary-specs">
+          <div class="spec-row">
+            <span class="label">Base & Length:</span>
+            <span class="val" id="specBase">Classic Acrylic Set</span>
+          </div>
+          <div class="spec-row">
+            <span class="label">Nail Shape:</span>
+            <span class="val" id="specShape">Almond Shape</span>
+          </div>
+          <div class="spec-row">
+            <span class="label">Artistry Level:</span>
+            <span class="val" id="specArt">French / Chrome Ombré</span>
+          </div>
+          <div class="spec-row">
+            <span class="label">Est. Duration:</span>
+            <span class="val" id="specTime">80 mins</span>
+          </div>
+        </div>
+
+        <div class="summary-total">
+          <span class="total-label">Estimated Total:</span>
+          <span class="total-num" id="specPrice">₹1,500</span>
+        </div>
+      </div>
+
+      <div>
+        <a href="https://wa.me/918732861178?text=Hi%20Abel!%20I%20designed%20my%20custom%20nail%20set%20on%20your%20website%3A%20Classic%20Acrylic%20Set%20in%20Almond%20Shape%20with%20French%20%2F%20Chrome%20Ombr%C3%A9%20(Est.%20%E2%82%B91%2C500).%20I'd%20like%20to%20book%20an%20appointment!" id="whatsappBookBtn" target="_blank" rel="noopener" class="btn-book-custom">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.999 0C5.373 0 0 5.373 0 12c0 2.126.554 4.195 1.603 6.002L.055 24l6.196-1.624A11.947 11.947 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 11.999 0zM12 21.821a9.816 9.816 0 0 1-5.006-1.373l-.358-.212-3.716.974.992-3.621-.233-.371A9.824 9.824 0 0 1 2.179 12C2.179 6.586 6.586 2.179 12 2.179S21.821 6.586 21.821 12 17.414 21.821 12 21.821zm5.39-7.378c-.295-.148-1.747-.862-2.018-.961-.271-.098-.468-.148-.665.148-.197.295-.762.961-.934 1.158-.172.197-.344.221-.639.074-.295-.148-1.245-.459-2.371-1.464-.877-.783-1.469-1.749-1.641-2.045-.172-.295-.018-.454.13-.601.134-.133.295-.344.443-.516.148-.172.197-.295.295-.492.098-.197.049-.369-.025-.516-.074-.148-.665-1.601-.911-2.193-.24-.576-.484-.498-.665-.507-.172-.008-.369-.008-.566-.008s-.516.074-.787.369c-.271.295-1.033 1.009-1.033 2.461s1.058 2.855 1.205 3.052c.148.197 2.083 3.181 5.045 4.461.705.305 1.255.487 1.684.624.708.225 1.353.193 1.863.117.571-.085 1.747-.714 1.993-1.404.246-.689.246-1.28.172-1.404-.074-.123-.271-.197-.566-.344z"/></svg>
+          <span>Book This Set via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY / LOOKBOOK -->
+<section id="gallery">
+  <div class="section-head">
+    <div class="eyebrow"><span class="line"></span><span>The Lookbook</span></div>
+    <h2 class="section-title">Recent <em>Artistry & Sets</em></h2>
+    <p class="section-sub">Every set is sculpted and hand-painted inside our Mansarovar studio. Filter by category or click any photo to inspect techniques and details.</p>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">All Sets (16)</button>
+    <button class="filter-btn" onclick="filterGallery('french', this)">French & Ombré</button>
+    <button class="filter-btn" onclick="filterGallery('3d', this)">3D Charms & Crystals</button>
+    <button class="filter-btn" onclick="filterGallery('art', this)">Hand-Painted Art</button>
+    <button class="filter-btn" onclick="filterGallery('cateye', this)">Velvet Cat-Eye & Chrome</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Item 1 -->
+    <div class="gallery-card" data-cat="3d" onclick="openLightbox('Screenshot_30.png', 'Sapphire Princess Bow 3D', 'Sculpted Hard Gel with sapphire blue micro-glitter French fade, adorned with 3D crystal bows and royal crown accents.', 'Hard Gel · 3D Crystals · French Fade')">
+      <img src="Screenshot_30.png" alt="Sapphire Princess Bow 3D" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#3DCharms #HardGel</span>
+        <h4 class="gallery-title">Sapphire Princess Bow 3D</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="gallery-card" data-cat="cateye" onclick="openLightbox('Screenshot_25.png', 'Midnight Burgundy Cat-Eye', 'Rich velvet ruby-burgundy magnetic cat-eye gel over sculpted almond tips with deep light-reflecting shimmer.', 'Magnetic Cat-Eye · Sculpted Gel')">
+      <img src="Screenshot_25.png" alt="Burgundy Cat-Eye" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#VelvetCatEye #Almond</span>
+        <h4 class="gallery-title">Midnight Burgundy Cat-Eye</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="gallery-card" data-cat="3d art" onclick="openLightbox('Screenshot_22.png', '3D Botanical Floral & Gold', 'Elegant nude base with hand-molded 3D ceramic-white flowers, delicate gold wire borders, and Swarovski crystal centers.', '3D Floral Art · Gold Wire · Nude Base')">
+      <img src="Screenshot_22.png" alt="3D Botanical Floral" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#3DFloral #WeddingReady</span>
+        <h4 class="gallery-title">3D Botanical Floral & Gold</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="gallery-card" data-cat="art" onclick="openLightbox('Screenshot_24.png', 'Noir & Gold Abstract Swirls', 'Sheer blush base layered with fluid black abstract waves and hand-painted metallic gold foil outlines.', 'Hand-Painted · Metallic Foil · Abstract')">
+      <img src="Screenshot_24.png" alt="Noir & Gold Abstract Swirls" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#HandPainted #GoldChrome</span>
+        <h4 class="gallery-title">Noir & Gold Abstract Swirls</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="gallery-card" data-cat="french" onclick="openLightbox('Screenshot_21.png', 'Classic French & Gold Glitter', 'Pristine white French tips on square-oval extensions featuring delicate sparkling silver-gold crystal smile lines.', 'French Tip · Silver-Gold Accents')">
+      <img src="Screenshot_21.png" alt="Classic French & Gold Glitter" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#ClassicFrench #GlitterAccent</span>
+        <h4 class="gallery-title">Classic French & Gold Glitter</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="gallery-card" data-cat="french art" onclick="openLightbox('Screenshot_27.png', 'Sunshine Yellow Candy Swirl', 'Vibrant yellow French tips paired with 3D embossed diagonal candy stripe accents for a playful summer aesthetic.', '3D Candy Stripes · Yellow French')">
+      <img src="Screenshot_27.png" alt="Sunshine Yellow Candy Swirl" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#CandySwirl #SummerVibes</span>
+        <h4 class="gallery-title">Sunshine Yellow Candy Swirl</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="gallery-card" data-cat="art" onclick="openLightbox('Screenshot_28.png', 'Tropical Sunset & Palm Detail', 'Vibrant orange-to-purple sunset ombré featuring intricate miniature hand-painted palm trees and lemon slice art.', 'Micro Hand-Paint · Sunset Ombré')">
+      <img src="Screenshot_28.png" alt="Tropical Sunset Palm" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#TropicalSunset #MicroArt</span>
+        <h4 class="gallery-title">Tropical Sunset & Palm Detail</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="gallery-card" data-cat="art" onclick="openLightbox('Screenshot_29.png', 'Neon Orange & Pink Psychedelic', 'Retro psychedelic fluid swirls marrying neon orange and magenta on soft square extensions.', 'Fluid Swirls · Neon Palette')">
+      <img src="Screenshot_29.png" alt="Neon Orange Pink Swirls" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#RetroSwirls #NeonPop</span>
+        <h4 class="gallery-title">Neon Orange & Pink Psychedelic</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="gallery-card" data-cat="3d cateye" onclick="openLightbox('Screenshot_31.png', 'Cow Print & Sage Gold Starburst', 'Modern eclectic set combining monochromatic cow print, rich sage green, and 3D gold chrome starburst emblems.', 'Cow Print · Gold Chrome · 3D Emblems')">
+      <img src="Screenshot_31.png" alt="Cow Print Sage Gold" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#CowPrint #GoldStarburst</span>
+        <h4 class="gallery-title">Cow Print & Sage Gold Starburst</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 10 -->
+    <div class="gallery-card" data-cat="french" onclick="openLightbox('Screenshot_33.png', 'Crimson Ruby French & Solid', 'Striking deep ruby red French tips combined with full glossy crimson accent nails on tapered square shape.', 'Ruby French · High Gloss')">
+      <img src="Screenshot_33.png" alt="Crimson Ruby French" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#RubyRed #TimelessFrench</span>
+        <h4 class="gallery-title">Crimson Ruby French & Solid</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 11 -->
+    <div class="gallery-card" data-cat="3d" onclick="openLightbox('Screenshot_36.png', 'Plum Glitter & Crystal Chevron', 'Deep plum galaxy shimmer square nails highlighted by an intricate V-shaped Swarovski crystal chevron necklace.', 'Galaxy Glitter · Crystal Chevron')">
+      <img src="Screenshot_36.png" alt="Plum Glitter Crystal" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#PlumGlitter #CrystalChevron</span>
+        <h4 class="gallery-title">Plum Glitter & Crystal Chevron</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 12 -->
+    <div class="gallery-card" data-cat="french cateye" onclick="openLightbox('Screenshot_38.png', 'Glazed Pearl Chrome French', 'Subtle micro-French white tips coated in luminous pearl glazed-donut chrome with a single delicate crystal stud.', 'Pearl Chrome · Glazed Finish')">
+      <img src="Screenshot_38.png" alt="Glazed Pearl Chrome French" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#GlazedDonut #PearlChrome</span>
+        <h4 class="gallery-title">Glazed Pearl Chrome French</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 13 -->
+    <div class="gallery-card" data-cat="french" onclick="openLightbox('Screenshot_26.png', 'Bridal Gold Glitter Ombré', 'Bridal mehndi-ready set featuring seamless gold champagne glitter ombré fade with custom crystal arrangements.', 'Bridal Ombré · Champagne Glitter')">
+      <img src="Screenshot_26.png" alt="Bridal Gold Glitter Ombre" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#BridalNails #GoldOmbre</span>
+        <h4 class="gallery-title">Bridal Gold Glitter Ombré</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 14 -->
+    <div class="gallery-card" data-cat="3d" onclick="openLightbox('Screenshot_40.png', 'Deep Velvet Shimmer & Crystals', 'Burgundy velvet shimmer finish punctuated by a dramatic full-cut crystal rhinestone cluster at the cuticle.', 'Velvet Shimmer · Rhinestone Cluster')">
+      <img src="Screenshot_40.png" alt="Deep Velvet Shimmer Crystals" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#VelvetShimmer #LuxuryCrystals</span>
+        <h4 class="gallery-title">Deep Velvet Shimmer & Crystals</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 15 -->
+    <div class="gallery-card" data-cat="art french" onclick="openLightbox('Screenshot_42.png', 'Festive Hand-Painted Holly & Berries', 'Holiday special micro French red tips with hand-painted evergreen holly branches and 3D berry drops.', 'Festive Micro-Art · Red Tips')">
+      <img src="Screenshot_42.png" alt="Festive Holly Berries" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#FestiveArt #HollyBranches</span>
+        <h4 class="gallery-title">Festive Hand-Painted Holly & Berries</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+
+    <!-- Item 16 -->
+    <div class="gallery-card" data-cat="art french" onclick="openLightbox('Screenshot_47 - Copy.png', 'Noir Tips & 3D Ceramic Florals', 'Sleek black French almond tips paired with matte nude accent nails featuring black petals and yellow stamens.', 'Noir French · Ceramic Petals')">
+      <img src="Screenshot_47 - Copy.png" alt="Noir Tips Ceramic Florals" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-tag">#NoirFrench #AlmondFlorals</span>
+        <h4 class="gallery-title">Noir Tips & 3D Ceramic Florals</h4>
+      </div>
+      <div class="zoom-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><circle cx="10" cy="10" r="7"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES & COMPARISON -->
+<section id="services">
+  <div class="section-head">
+    <div class="eyebrow"><span class="line"></span><span>Our Core Systems</span></div>
+    <h2 class="section-title">Precision Nail Craft, <em>Four Ways</em></h2>
+    <p class="section-sub">We use only premium odour-free European and American gel & acrylic systems. Every appointment includes full dry Russian e-file cuticle prep and nourishing cuticle oil treatment.</p>
+  </div>
+
+  <div class="services-grid">
+    <!-- Service 1 -->
+    <div class="service-card">
+      <div>
+        <span class="service-num">01</span>
+        <h3>Soft Gel Overlay / Tips</h3>
+        <p>Pre-formed full cover gel tips bonded with flexible builder gel. Ultra lightweight, gentle on natural nails, and quick to apply.</p>
+        <ul class="service-specs">
+          <li>Durability: 3 to 4 Weeks</li>
+          <li>Ideal for quick transformations</li>
+          <li>Zero dust or odor during application</li>
+          <li>Includes Russian dry cuticle prep</li>
+        </ul>
+      </div>
+      <div class="service-footer">
+        <div class="service-price">₹999 <span>/ full set</span></div>
+        <a href="#calculator" class="btn-secondary" style="padding: 10px 18px; font-size: 12px;">Customize</a>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card featured">
+      <div>
+        <span class="service-num">02</span>
+        <h3>Classic Acrylic Sculpting</h3>
+        <p>The time-tested gold standard for maximum structural strength, extreme lengths, and crisp high-definition architecture.</p>
+        <ul class="service-specs">
+          <li>Durability: 4 to 5 Weeks</li>
+          <li>Best for long & stiletto shapes</li>
+          <li>Custom sculpted over paper forms</li>
+          <li>Refills available every 3 weeks</li>
+        </ul>
+      </div>
+      <div class="service-footer">
+        <div class="service-price">₹1,100 <span>/ full set</span></div>
+        <a href="#calculator" class="btn-primary" style="padding: 10px 18px; font-size: 12px;">Customize</a>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div>
+        <span class="service-num">03</span>
+        <h3>Hard Gel Sculpted Set</h3>
+        <p>An advanced hypoallergenic, flexible, and glass-clear extension system that feels completely natural and flexes with your nail.</p>
+        <ul class="service-specs">
+          <li>Durability: 4+ Weeks</li>
+          <li>100% Odor-free hypoallergenic formula</li>
+          <li>High gloss mirror retention</li>
+          <li>Gentlest on damaged natural nails</li>
+        </ul>
+      </div>
+      <div class="service-footer">
+        <div class="service-price">₹1,300 <span>/ full set</span></div>
+        <a href="#calculator" class="btn-secondary" style="padding: 10px 18px; font-size: 12px;">Customize</a>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+      <div>
+        <span class="service-num">04</span>
+        <h3>Custom Artistry & Charms</h3>
+        <p>Transform your set into a wearable masterpiece with our specialized add-on art tiers — from subtle chrome to full 3D sculptures.</p>
+        <ul class="service-specs">
+          <li>Hand-painted florals & fine line work</li>
+          <li>Swarovski crystals & 3D bow charms</li>
+          <li>Velvet magnetic Cat-Eye & Glazed Chrome</li>
+          <li>Custom bridal & party theme sets</li>
+        </ul>
+      </div>
+      <div class="service-footer">
+        <div class="service-price">From ₹150 <span>/ nail</span></div>
+        <a href="#gallery" class="btn-secondary" style="padding: 10px 18px; font-size: 12px;">See Art</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nail Care & Maintenance Accordion -->
+  <div class="care-box">
+    <h3>Expert Nail Care & Maintenance Guide</h3>
+    <div class="accordion-item open" onclick="toggleAccordion(this)">
+      <button class="accordion-btn">
+        <span>How long do nail extensions last?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        With proper care, our Acrylic and Hard Gel extensions last between 3 to 5 weeks depending on your natural nail growth rate. We recommend booking a infill/refill session at the 3-week mark to maintain structural balance and keep your cuticles looking immaculate.
+      </div>
+    </div>
+
+    <div class="accordion-item" onclick="toggleAccordion(this)">
+      <button class="accordion-btn">
+        <span>Can I bring my own Pinterest / Instagram design inspiration?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        Absolutely! Abel specializes in recreating complex inspiration photos, customizing colors to match your skin undertone or outfit, and adding personal touches. Feel free to WhatsApp your reference images ahead of your appointment so we can prep specific charms or colors!
+      </div>
+    </div>
+
+    <div class="accordion-item" onclick="toggleAccordion(this)">
+      <button class="accordion-btn">
+        <span>How should I prep my hands before arriving?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        Please avoid applying heavy hand lotions, cuticle oils, or soaking your hands in water within 2 hours of your appointment. Clean, dry nails ensure maximum adhesion for your extensions. If you have existing gel or acrylic from another salon, please let us know when booking so we allocate gentle removal time.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS & WALL OF LOVE -->
+<section id="reviews" class="reviews-section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="line" style="background:#fff;"></span><span style="color:#fff;">Verified Love</span></div>
+    <h2 class="section-title" style="color:#fff;">Loved across <em style="color:var(--rosegold-light);">Jaipur</em></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.8);">Read why our guests consistently rate us 4.9 out of 5 stars on Google Business Profile.</p>
+  </div>
+
+  <div class="review-grid">
+    <!-- Review 1 -->
+    <div class="review-card">
+      <div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The best nail art salon in whole Jaipur I must say. Reasonable. Amazing work. Good behavior. Must go place. Fully satisfied! 👌👌👌"</p>
+      </div>
+      <div class="review-author">
+        <div class="author-avatar">Y</div>
+        <div class="author-info">
+          <div class="name">Yukta Israni</div>
+          <div class="meta">Verified Google Review · 2 reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+      <div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Such a great experience Girlss! Beautiful work, clean setup, and perfect finishing. Got so many compliments on my nails. Highly recommended! Specially Thanks To Mr Abel."</p>
+      </div>
+      <div class="review-author">
+        <div class="author-avatar" style="background:#0D9488;">T</div>
+        <div class="author-info">
+          <div class="name">Tanya Lodha</div>
+          <div class="meta">Verified Google Review · 4 reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+      <div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Good work by Abel. He is knowledgeable and quite skilled. The attention to fine lines and cuticle care is unmatched anywhere else in Mansarovar."</p>
+      </div>
+      <div class="review-author">
+        <div class="author-avatar" style="background:#E11D48;">K</div>
+        <div class="author-info">
+          <div class="name">Kritika Shukla</div>
+          <div class="meta">Local Guide · 22 reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="google-banner">
+    <div class="gb-left">
+      <span class="gb-score">4.9 ★★★★★</span>
+      <div>
+        <div style="font-weight:700; font-size:15px; color:#fff;">Google Business Profile</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.7);">Based on 68+ verified client reviews</div>
+      </div>
+    </div>
+    <a href="https://maps.google.com/?q=Nails+by+Abel+Mansarovar+Jaipur" target="_blank" rel="noopener" class="gb-link">Read all reviews on Google →</a>
+  </div>
+</section>
+
+<!-- VISIT & LOCATION -->
+<section id="visit">
+  <div class="section-head">
+    <div class="eyebrow"><span class="line"></span><span>Visit Our Studio</span></div>
+    <h2 class="section-title">Find Us in <em>Mansarovar</em></h2>
+    <p class="section-sub">Tucked into Shipra Path, our studio is designed as a serene retreat. Appointments run by hand, one guest at a time.</p>
+  </div>
+
+  <div class="visit-grid">
+    <div class="contact-details">
+      <!-- Address -->
+      <div class="info-box">
+        <div class="info-icon">📍</div>
+        <div class="info-text">
+          <div class="label">Studio Location</div>
+          <div class="value">150/2, Shipra Path, Sector 7</div>
+          <div class="sub">Mansarovar, Jaipur, Rajasthan 302020</div>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div class="info-box">
+        <div class="info-icon">🕒</div>
+        <div class="info-text">
+          <div class="label">Operating Hours</div>
+          <div class="value">Open Daily · 11:00 AM – 10:00 PM</div>
+          <div class="sub">Prior booking strongly recommended for custom nail art</div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="info-box">
+        <div class="info-icon">📞</div>
+        <div class="info-text">
+          <div class="label">Direct Phone & WhatsApp</div>
+          <div class="value"><a href="tel:+918732861178">087328 61178</a></div>
+          <div class="sub">Call or message anytime to check slot availability</div>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <div class="info-box">
+        <div class="info-icon">✦</div>
+        <div class="info-text">
+          <div class="label">Social & Portfolio</div>
+          <div class="value"><a href="https://instagram.com" target="_blank" rel="noopener">@nailsbyabel</a></div>
+          <div class="sub">Follow us for daily nail art video reels and seasonal specials</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps?q=150%2F2%2C+Shipra+Path%2C+Sector+7%2C+Mansarovar%2C+Jaipur%2C+Rajasthan+302020&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nails by Abel location map"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">Nails <em>by</em> Abel</div>
+      <p>Precision nail extensions, therapeutic dry e-file manicures, and bespoke hand-painted nail art in Mansarovar, Jaipur.</p>
+    </div>
+
+    <div class="footer-links-group">
+      <div class="footer-links">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#calculator">Price Calculator</a></li>
+          <li><a href="#gallery">Lookbook Gallery</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Contact Studio</h5>
+        <ul>
+          <li><a href="tel:+918732861178">087328 61178</a></li>
+          <li><a href="https://wa.me/918732861178">WhatsApp Booking</a></li>
+          <li><a href="#visit">Mansarovar, Jaipur</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram Portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Nails by Abel. All rights reserved.</span>
+    <span>Sector 7, Shipra Path, Mansarovar, Jaipur</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <div class="lightbox-img-wrap">
+      <img id="lbImage" src="" alt="Nail Art Full View" />
+    </div>
+    <div class="lightbox-details">
+      <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <div>
+        <span class="lb-tag" id="lbTag">#FeaturedArt</span>
+        <h3 class="lb-title" id="lbTitle">Sapphire Princess Bow 3D</h3>
+        <p class="lb-desc" id="lbDesc">Intricate hand-painted nail set crafted inside our Mansarovar studio.</p>
+        
+        <div class="lb-specs">
+          <div class="lb-spec-row">
+            <span class="label">System & Technique:</span>
+            <span class="val" id="lbSpecsText">Hard Gel · 3D Crystals</span>
+          </div>
+          <div class="lb-spec-row">
+            <span class="label">Studio Rating:</span>
+            <span class="val">★★★★★ (Verified)</span>
+          </div>
+          <div class="lb-spec-row">
+            <span class="label">Customization:</span>
+            <span class="val">Available in all shapes</span>
+          </div>
+        </div>
+      </div>
+
+      <a id="lbBookBtn" href="https://wa.me/918732861178" target="_blank" rel="noopener" class="btn-primary" style="width:100%; justify-content:center; text-align:center;">
+        <span>Request This Exact Style</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---------- HEADER SCROLL STATE ----------
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // ---------- HERO INTERACTIVE SWATCH SHOWCASE ----------
+  const heroSwatches = [
+    { src: 'Screenshot_30.png', title: 'Sapphire Princess Bow 3D', tech: 'Sculpted Hard Gel · 3D Crystal Charms', ghost: 'SAPPHIRE BOW' },
+    { src: 'Screenshot_25.png', title: 'Midnight Burgundy Cat-Eye', tech: 'Ruby Velvet Cat-Eye · Magnetic Shimmer', ghost: 'VELVET CAT-EYE' },
+    { src: 'Screenshot_22.png', title: '3D Botanical Floral & Gold', tech: 'Hand-Molded Ceramic Petals · Gold Wire', ghost: '3D FLORAL' },
+    { src: 'Screenshot_28.png', title: 'Tropical Sunset & Palm Detail', tech: 'Micro Hand-Paint · Sunset Ombré Fade', ghost: 'SUNSET PALM' },
+    { src: 'Screenshot_31.png', title: 'Cow Print & Sage Gold Starburst', tech: 'Eclectic Monochromatic · Gold Chrome', ghost: 'SAGE STARBURST' }
+  ];
+
+  let currentHeroIndex = 0;
+  function setHeroShowcase(index, element) {
+    currentHeroIndex = index;
+    const data = heroSwatches[index];
+    const imgEl = document.getElementById('heroShowcaseImg');
+    const titleEl = document.getElementById('showcaseTitle');
+    const techEl = document.getElementById('showcaseTech');
+    const ghostEl = document.getElementById('heroGhost');
+
+    imgEl.style.opacity = '0';
+    setTimeout(() => {
+      imgEl.src = data.src;
+      titleEl.textContent = data.title;
+      techEl.textContent = data.tech;
+      ghostEl.textContent = data.ghost;
+      imgEl.style.opacity = '1';
+    }, 200);
+
+    // Update swatch active state
+    if (element) {
+      document.querySelectorAll('.swatch-item').forEach(el => el.classList.remove('active'));
+      element.classList.add('active');
+    }
+  }
+
+  // Auto-rotate hero every 6 seconds if not hovered
+  let heroTimer = setInterval(() => {
+    currentHeroIndex = (currentHeroIndex + 1) % heroSwatches.length;
+    const targetSwatch = document.querySelectorAll('.swatch-item')[currentHeroIndex];
+    setHeroShowcase(currentHeroIndex, targetSwatch);
+  }, 6000);
+
+  document.querySelector('.showcase-container').addEventListener('mouseenter', () => clearInterval(heroTimer));
+
+  function openLightboxFromHero() {
+    const active = heroSwatches[currentHeroIndex];
+    openLightbox(active.src, active.title, 'Designed right here in our Mansarovar studio. Click Request below to book your appointment for this stunning look!', active.tech);
+  }
+
+  // ---------- INTERACTIVE PRICE CALCULATOR ("DESIGN YOUR SET") ----------
+  let calcState = {
+    baseName: 'Classic Acrylic Set',
+    basePrice: 1100,
+    baseTime: 60,
+    shapeName: 'Almond Shape',
+    artName: 'French / Chrome Ombré',
+    artPrice: 400,
+    artTime: 20
+  };
+
+  function selectCalcOption(type, price, time, name, el) {
+    // Update active button classes within step
+    if (type === 'base') {
+      document.querySelectorAll('#baseOptions .option-pill').forEach(btn => btn.classList.remove('active'));
+      calcState.basePrice = price;
+      calcState.baseTime = time;
+      calcState.baseName = name;
+    } else if (type === 'shape') {
+      document.querySelectorAll('#shapeOptions .option-pill').forEach(btn => btn.classList.remove('active'));
+      calcState.shapeName = name;
+    } else if (type === 'art') {
+      document.querySelectorAll('#artOptions .option-pill').forEach(btn => btn.classList.remove('active'));
+      calcState.artPrice = price;
+      calcState.artTime = time;
+      calcState.artName = name;
+    }
+    el.classList.add('active');
+    updateCalcSummary();
+  }
+
+  function updateCalcSummary() {
+    const totalPrice = calcState.basePrice + calcState.artPrice;
+    const totalTime = calcState.baseTime + calcState.artTime;
+
+    document.getElementById('specBase').textContent = calcState.baseName;
+    document.getElementById('specShape').textContent = calcState.shapeName;
+    document.getElementById('specArt').textContent = calcState.artName;
+    document.getElementById('specTime').textContent = totalTime + ' mins';
+    document.getElementById('specPrice').textContent = '₹' + totalPrice.toLocaleString('en-IN');
+
+    // Update WhatsApp link
+    const msg = `Hi Abel! I designed my custom nail set on your website: ${calcState.baseName} in ${calcState.shapeName} with ${calcState.artName} (Est. ₹${totalPrice.toLocaleString('en-IN')}, ~${totalTime}m). I'd like to book an appointment!`;
+    document.getElementById('whatsappBookBtn').href = `https://wa.me/918732861178?text=${encodeURIComponent(msg)}`;
+  }
+
+  // ---------- GALLERY FILTERING ----------
+  function filterGallery(category, button) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const cards = document.querySelectorAll('.gallery-card');
+    cards.forEach(card => {
+      const cats = card.getAttribute('data-cat');
+      if (category === 'all' || cats.includes(category)) {
+        card.style.display = 'block';
+        card.style.opacity = '0';
+        setTimeout(() => card.style.opacity = '1', 50);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // ---------- ACCORDION ----------
+  function toggleAccordion(item) {
+    item.classList.toggle('open');
+  }
+
+  // ---------- LIGHTBOX MODAL ----------
+  function openLightbox(src, title, desc, specs) {
+    const modal = document.getElementById('lightboxModal');
+    document.getElementById('lbImage').src = src;
+    document.getElementById('lbTitle').textContent = title;
+    document.getElementById('lbDesc').textContent = desc;
+    document.getElementById('lbSpecsText').textContent = specs;
+    document.getElementById('lbTag').textContent = '#' + title.replace(/\s+/g, '');
+    
+    const msg = `Hi Abel! I saw the "${title}" on your website gallery and would love to book an appointment for this exact look!`;
+    document.getElementById('lbBookBtn').href = `https://wa.me/918732861178?text=${encodeURIComponent(msg)}`;
+    
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(event) {
+    document.getElementById('lightboxModal').classList.remove('open');
+    document.body.style.overflow = 'auto';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
+</html>
