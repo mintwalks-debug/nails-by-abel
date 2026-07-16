@@ -7,6 +7,13 @@
 <meta name="description" content="Nails by Abel — Premier Nail Art Studio in Mansarovar, Jaipur. Acrylic Nails, Hard Gel Extensions, Soft Gel Tips, Hand-Painted Art, 3D Charms & Cat-Eye Chrome. Rated 4.9★ on Google." />
 <meta name="keywords" content="Nails by Abel, nail salon Jaipur, best nail salon Mansarovar, acrylic nails Jaipur, gel nails, hand painted nail art, nail extensions Jaipur" />
 
+<!-- Speed Optimization Resource Hints & Preloads -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://maps.google.com">
+<link rel="dns-prefetch" href="https://maps.gstatic.com">
+<link rel="preload" href="Screenshot_30.png" as="image" fetchpriority="high">
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -804,7 +811,7 @@
   <div class="hero-right content-wrap">
     <div class="showcase-container">
       <div class="showcase-card" id="showcaseCard" onclick="openLightboxFromHero()">
-        <img src="Screenshot_30.png" id="heroShowcaseImg" alt="Sapphire Princess Bow 3D Nails by Abel" />
+        <img src="Screenshot_30.png" id="heroShowcaseImg" alt="Sapphire Princess Bow 3D Nails by Abel" fetchpriority="high" loading="eager" decoding="sync" />
         <div class="showcase-overlay">
           <div class="showcase-info">
             <h3 id="showcaseTitle">Sapphire Princess Bow 3D</h3>
@@ -817,19 +824,19 @@
       <!-- Swatch Bar -->
       <div class="swatch-bar">
         <div class="swatch-item active" onclick="setHeroShowcase(0, this)" title="Sapphire Princess Bow">
-          <img src="Screenshot_30.png" alt="Sapphire" />
+          <img src="Screenshot_30.png" alt="Sapphire" decoding="async" />
         </div>
         <div class="swatch-item" onclick="setHeroShowcase(1, this)" title="Velvet Cat-Eye">
-          <img src="Screenshot_25.png" alt="Velvet" />
+          <img src="Screenshot_25.png" alt="Velvet" decoding="async" />
         </div>
         <div class="swatch-item" onclick="setHeroShowcase(2, this)" title="3D Floral French">
-          <img src="Screenshot_22.png" alt="3D Floral" />
+          <img src="Screenshot_22.png" alt="3D Floral" decoding="async" />
         </div>
         <div class="swatch-item" onclick="setHeroShowcase(3, this)" title="Tropical Sunset">
-          <img src="Screenshot_28.png" alt="Tropical" />
+          <img src="Screenshot_28.png" alt="Tropical" decoding="async" />
         </div>
         <div class="swatch-item" onclick="setHeroShowcase(4, this)" title="Sage Gold Chrome">
-          <img src="Screenshot_31.png" alt="Sage" />
+          <img src="Screenshot_31.png" alt="Sage" decoding="async" />
         </div>
         <span class="swatch-label" id="swatchLabel">Click to preview</span>
       </div>
