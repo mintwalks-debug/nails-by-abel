@@ -685,6 +685,86 @@
       box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 15px rgba(37, 211, 102, 0.3);
     }
   }
+  /* ---------- INSTAGRAM FEED ---------- */
+  .instagram-section {
+    padding: 90px clamp(20px, 5vw, 80px);
+    background: var(--cream);
+    text-align: center;
+    border-top: 1px solid rgba(232, 125, 149, 0.1);
+  }
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+  }
+  @media (min-width: 600px) {
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 960px) {
+    .instagram-grid { grid-template-columns: repeat(5, 1fr); }
+  }
+  .instagram-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-gold);
+    display: block;
+  }
+  .instagram-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+  }
+  .instagram-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(67, 26, 36, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transition: all 300ms ease;
+    gap: 8px;
+  }
+  .instagram-card:hover img {
+    transform: scale(1.08);
+  }
+  .instagram-card:hover .instagram-overlay {
+    opacity: 1;
+  }
+  .instagram-overlay .insta-icon {
+    font-size: 24px;
+    transform: translateY(10px);
+    transition: transform 300ms ease;
+  }
+  .instagram-overlay .insta-text {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: translateY(10px);
+    transition: transform 300ms ease;
+  }
+  .instagram-card:hover .instagram-overlay .insta-icon,
+  .instagram-card:hover .instagram-overlay .insta-text {
+    transform: translateY(0);
+  }
+  .insta-inline-link {
+    color: var(--rosegold);
+    font-weight: 700;
+    transition: color 200ms ease;
+  }
+  .insta-inline-link:hover {
+    color: var(--rosegold-dark);
+  }
 </style>
 </head>
 <body>
@@ -1444,6 +1524,60 @@
   </div>
 </section>
 
+<!-- INSTAGRAM FEED PREVIEW -->
+<section class="instagram-section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="line"></span><span>Instagram Feed</span></div>
+    <h2 class="section-title">Step Into Our <em>Virtual Gallery</em></h2>
+    <p class="section-sub">Follow us on Instagram <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="insta-inline-link">@nailsby_abel</a> for fresh daily sets, behind-the-scenes tutorials, and live availability updates.</p>
+  </div>
+
+  <div class="instagram-grid">
+    <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="instagram-card">
+      <img src="Screenshot_30.png" alt="Nails by Abel Sapphire Princess Bow" loading="lazy" />
+      <div class="instagram-overlay">
+        <span class="insta-icon">📸</span>
+        <span class="insta-text">@nailsby_abel</span>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="instagram-card">
+      <img src="Screenshot_25.png" alt="Nails by Abel Midnight Cat-Eye" loading="lazy" />
+      <div class="instagram-overlay">
+        <span class="insta-icon">📸</span>
+        <span class="insta-text">@nailsby_abel</span>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="instagram-card">
+      <img src="Screenshot_22.png" alt="Nails by Abel 3D Botanical Floral" loading="lazy" />
+      <div class="instagram-overlay">
+        <span class="insta-icon">📸</span>
+        <span class="insta-text">@nailsby_abel</span>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="instagram-card">
+      <img src="Screenshot_28.png" alt="Nails by Abel Tropical Sunset" loading="lazy" />
+      <div class="instagram-overlay">
+        <span class="insta-icon">📸</span>
+        <span class="insta-text">@nailsby_abel</span>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="instagram-card">
+      <img src="Screenshot_31.png" alt="Nails by Abel Sage Green Chrome" loading="lazy" />
+      <div class="instagram-overlay">
+        <span class="insta-icon">📸</span>
+        <span class="insta-text">@nailsby_abel</span>
+      </div>
+    </a>
+  </div>
+  
+  <div style="text-align: center; margin-top: 42px;">
+    <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="btn-primary" style="display: inline-flex; justify-content: center; gap: 8px;">
+      <span>Follow @nailsby_abel on Instagram</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+  </div>
+</section>
+
 <!-- VISIT & LOCATION -->
 <section id="visit">
   <div class="section-head">
@@ -1489,7 +1623,7 @@
         <div class="info-icon">✦</div>
         <div class="info-text">
           <div class="label">Social & Portfolio</div>
-          <div class="value"><a href="https://instagram.com" target="_blank" rel="noopener">@nailsbyabel</a></div>
+          <div class="value"><a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener">@nailsby_abel</a></div>
           <div class="sub">Follow us for daily nail art video reels and seasonal specials</div>
         </div>
       </div>
@@ -1512,7 +1646,7 @@
       <div class="footer-logo">Nails <em>by</em> Abel</div>
       <p>Precision nail extensions, therapeutic dry e-file manicures, and bespoke hand-painted nail art in Mansarovar, Jaipur. Dedicated to structural strength and clean cuticle craftsmanship.</p>
       <div class="footer-socials">
-        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">📸</a>
+        <a href="https://www.instagram.com/nailsby_abel/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">📸</a>
         <a href="https://wa.me/918732861178" target="_blank" rel="noopener" class="social-icon-btn" aria-label="WhatsApp">💬</a>
         <a href="https://maps.google.com/?q=Nails+by+Abel+Mansarovar+Jaipur" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Location Map">📍</a>
       </div>
